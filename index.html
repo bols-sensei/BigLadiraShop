@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=v, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+  <div class="nav-container">
+    <div class="brand"><i class="fa-solid fa-crown"></i><a href="#home">Ladi Shop</a></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" aria-current="page">HOME</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</header>
+
+<main class="container">
+    <section class="hero" id="home"> 
+        <div class="hero-col hero-text"> 
+            <h1 class="hero-title">Baskets d’été pour homme</h1> 
+            <p class="hero-desc"> Découvrez notre collection estivale de baskets pour homme : confort, style et durabilité réunis pour vos sorties quotidiennes. </p> 
+        </div> 
+        <div class="hero-col hero-image"> 
+            <div class="round"> 
+            <img id="productImg" src="images/black.png" alt="Visuel du produit" /> 
+        </div> </div> <div class="hero-col hero-options"> 
+            <p class="delivery-text"> Livraison rapide et choix de couleur disponibles pour une expérience agréable. </p> 
+        <div class="colors" role="list"> 
+            <span class="swatch selected" style="background:#000" data-img="images/black.png" aria-label="Noir"></span> 
+            <span class="swatch" style="background:#4CAF50" data-img="images/green.png" aria-label="Vert"></span> 
+        </div> 
+        <div style="margin-top:1rem;"> <button class="btn" id="whatsappBtn"> <i class="fa-brands fa-whatsapp"></i> Commander via WhatsApp </button>
+         </div> 
+        </div> 
+    </section>
+    <div class="product-slider">
+  <button class="slider-btn active" onclick="filterCategory('basket')">Baskets</button>
+  <button class="slider-btn" onclick="filterCategory('chaussure')">Chaussures</button>
+</div>
+
+<h2 class="section-title">Nos Produits</h2>
+<section class="grid" id="shop"></section>
+<div id="pagination" class="pagination"></div>
+
+<footer id="contact">
+  <h2><i class="fa-solid fa-crown"></i> Ladi Shop</h2>
+  <p>Contactez-nous via WhatsApp : <a href="https://wa.me/243998407062" target="_blank">0998407062</a></p>
+  <p class="muted">© <span id="year"></span> Ladi Shop — Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
